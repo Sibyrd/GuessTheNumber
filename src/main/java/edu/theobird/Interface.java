@@ -1,16 +1,10 @@
 package edu.theobird;
 
-import org.json.simple.JSONArray;
-import org.json.simple.parser.JSONParser;
-import org.json.simple.parser.ParseException;
 
 import javax.swing.*;
 import java.awt.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
-import java.io.FileNotFoundException;
-import java.io.FileReader;
-import java.io.IOException;
 
 
 public class Interface extends JFrame {
@@ -37,7 +31,7 @@ public class Interface extends JFrame {
         //listener
         play.addActionListener(new ActionListener() {
             public void actionPerformed(ActionEvent e) {
-                if ( debounce == false ){
+                if ( !debounce ){
                     debounce = true;
                     if (Main.game()) {
                         debounce = false;
