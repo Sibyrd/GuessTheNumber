@@ -34,7 +34,7 @@ public class lbinterface extends JFrame {
                 Object obj = parser.parse(reader);
 
                 JSONArray scores = (JSONArray) obj;
-                JSONObject scoresobject = (JSONObject) scores.getFirst();
+                JSONObject scoresobject = (JSONObject) scores.get(0);
                 JLabel p1 = new JLabel("Player 1: "+scoresobject.get("Player 1"));
                 JLabel p2 = new JLabel("Player 2: "+scoresobject.get("Player 2"));
                 JLabel p3 = new JLabel("Player 3: "+scoresobject.get("Player 3"));

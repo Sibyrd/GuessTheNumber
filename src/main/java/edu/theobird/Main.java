@@ -138,7 +138,7 @@ public class Main {
                 Object obj = parser.parse(reader);
 
                 JSONArray scores = (JSONArray) obj;
-                JSONObject scoreobject = (JSONObject) scores.getFirst();
+                JSONObject scoreobject = (JSONObject) scores.get(0);
                 long winnerscore = (long) scoreobject.get("Player "+winner);
                 scoreobject.put("Player "+winner, winnerscore+1);
 
